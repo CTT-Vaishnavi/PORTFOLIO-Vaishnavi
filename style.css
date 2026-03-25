@@ -270,11 +270,16 @@ transition: .5s ease;
     transform: translateY(0);
 }
 .portfolio-layer h4{
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    text-shadow: 0 0 5px red;
 }
 .portfolio-layer p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: .3rem 0 1rem;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .portfolio-layer a {
     display: inline-flex;
@@ -288,7 +293,14 @@ transition: .5s ease;
 .portfolio-layer i{
 font-size: 2rem;
 }
-
+.Badge{
+    font-size: 1em;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 0.5em;
+    border-radius: 20px;
+    border: 2px solid var(--main-color);
+}
 
 
 /* contact form */

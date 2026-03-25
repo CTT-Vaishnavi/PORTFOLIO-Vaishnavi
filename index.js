@@ -42,3 +42,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
                     
+// filter project
+
+const filterButtons = document.querySelectorAll(".portfolio-filter button");
+            const items = document.querySelectorAll(".portfolio-box");
+
+            filterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+
+                    document.querySelector(".portfolio-filter .active").classList.remove("active");
+                    button.classList.add("active");
+
+                    const filter = button.getAttribute("data-filter");
+
+                    items.forEach(item => {
+                        if (filter === "all" || item.getAttribute("data-category") === filter) {
+                            item.style.display = "block";
+                        } else {
+                            item.style.display = "none";
+                        }
+                    });
+                });
+            });
