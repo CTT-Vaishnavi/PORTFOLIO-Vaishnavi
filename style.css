@@ -1,5 +1,7 @@
 *{
     margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;outline: none;scroll-behavior: smooth;font-family: sans-serif;
+            transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+     
 }
 :root{
     --bg-color:#1f242d;
@@ -7,6 +9,27 @@
     --text-color: #fff;
     --main-color:#0ef;
 }
+.light-mode {
+    --bg-color: #ffffff;
+    --second-bg-color: #f2f2f2;
+    --text-color: #000000;
+    --main-color: #0077ff;
+}
+#theme-toggle {
+    margin-left: 2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
 html{
     font-size: 62.5%;
     /* overflow: hidden; */
@@ -16,22 +39,35 @@ body{
     color: var(--text-color);
     text-align: justify;
 }
-section{
+/* section{
     min-height: 100vh;
    padding: 10rem 9% 2rem;
+} */
+section {
+    min-height: auto;
+    padding: 8rem 9% 3rem;
 }
 .header{
     position: fixed;
     top:0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 0.5rem 3%;
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    flex-wrap: wrap;
 }
+#theme-toggle {
+    margin-left: 1rem;
+}
+
+
+
+
+
 .logo{
     font-size: 2.5rem;
     color: var(--text-color);
@@ -65,10 +101,12 @@ a:active{
     color: var(--text-color);
     display: none;
 }
-.home{
+.home {
+    margin-top: 3%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 4%;
 }
 .home-img img{
     width: 35vw;
@@ -94,11 +132,9 @@ a:active{
     font-weight: 700;
 }
 
-
 .home-content h3:nth-of-type(2){
     margin-bottom: 2rem;
 }
-
 
 .home-content h1{
     font-size: 5.6rem;
@@ -109,7 +145,7 @@ span{
     color: var(--main-color);
 }
 .home-content p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 .social-media a {
     display: inline-flex;
@@ -352,7 +388,7 @@ font-size: 2rem;
     background: var(--bg-color);
     border-radius: 0.5rem;
     padding: 1.5rem;
-    text-align: centre;
+    text-align: center;
     width: calc(25% - 1rem);
     box-shadow:0 0.2rem 0.5rem var(--main-color);
     transition: transform 0.3s;
@@ -460,6 +496,7 @@ line-height: 1.2;
     flex-wrap: wrap;
     padding: 2rem 9%;
     background: var(--second-bg-color);
+    /* background: #cecdc9; */
 }
 .link{
     display: flex;
@@ -488,118 +525,197 @@ line-height: 1.2;
     font-size: 2.4rem;
     color: var(--second-bg-color);
 }
-@media (max-width: 1200px){
-    html{
-        font-size: 55%;
-    }
-}
-@media (max-width: 991px){
-    html{
-        padding: 2rem 3%;
-    }
-    section{
-        padding: 10rem 3% 2rem;
-    }
-    .service{
-        padding-bottom: 7rem;
-    }
-    .footer{
-        padding: 2rem 3%;
+          @media (max-width: 1200px) {
+                    html {
+                        font-size: 55%;
+                    }
+                }
         
-    }
-}
-@media (max-width: 768px){
-    #menu-icon{
-        display: block;
-    }
-    .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: var(--bg-color);
-        border-top: .1rem solid rgba(0,0,0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
-        display: none;
-    }
-    .navbar.active{
-        display: block;
-    }
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-    .home{
-        flex-direction: column;
-    }
-    .home-content h3{
-        font-size: 2.6rem;
-    }
-    .home-content h1{
-        font-size: 4.5rem;
-    }
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
-    .about{
-        flex-direction: column-reverse;
-    }
-     .about img{
-        width: 70vw;
-        margin-top: 4rem;
+                /* Tablet */
+                @media (max-width: 991px) {
+                    html {
+                        padding: 0;
+                    }
         
-    }
-    .service h2{
-        margin-bottom: 3rem;
-    }
-    .skill {
-                width: calc(30.33% - 1rem);
-            }
-    .container{
-   flex-direction: column;
-            }
-    .portfolio h2{
-        margin-bottom: 3rem;
-    }
-    .portfolio-container{
-        grid-template-columns: repeat(2,1fr)
-    }
-    
+                    section {
+                        padding: 8rem 4% 2rem;
+                    }
+        
+                    .service {
+                        padding-bottom: 5rem;
+                    }
+        
+                    .footer {
+                        padding: 2rem 4%;
+                    }
+                }
+        
+                /* Mobile (Medium) */
+                @media (max-width: 768px) {
+                    #menu-icon {
+                        display: block;
+                    }
+        
+                    .header {
+                        padding: 1.5rem 4%;
+                    }
+        
+                    .navbar {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        padding: 1rem 4%;
+                        background: var(--bg-color);
+                        border-top: .1rem solid rgba(0, 0, 0, .2);
+                        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+                        display: none;
+                    }
+        
+                    .navbar.active {
+                        display: block;
+                    }
+        
+                    .navbar a {
+                        display: block;
+                        font-size: 1.8rem;
+                        margin: 2rem 0;
+                    }
+        
+                    /* SECTION SPACING FIX */
+                    section {
+                        padding: 7rem 4% 2rem;
+                    }
+        
+                    .home {
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
+        
+                    .home-content {
+                        text-align: center;
+                    }
+        
+                    .home-content h3 {
+                        font-size: 2.4rem;
+                    }
+        
+                    .home-content h1 {
+                        font-size: 4rem;
+                    }
+        
+                    .home-img img {
+                        width: 80%;
+                        max-width: 300px;
+                        margin-top: 2rem;
+                    }
+        
+                    .about {
+                        flex-direction: column-reverse;
+                        gap: 2rem;
+                    }
+        
+                    .about img {
+                        width: 80%;
+                        max-width: 300px;
+                        margin-top: 2rem;
+                    }
+        
+                    .service h2 {
+                        margin-bottom: 2rem;
+                    }
+        
+                    .skill {
+                        width: calc(45% - 1rem);
+                    }
+        
+                    .container {
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
+        
+                    .portfolio h2 {
+                        margin-bottom: 2rem;
+                    }
+        
+                    .portfolio-container {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1.5rem;
+                    }
+                }
+        
+                /* Small Mobile */
+                @media (max-width: 480px) {
+                    html {
+                        font-size: 50%;
+                    }
+        
+                    section {
+                        padding: 6rem 3% 2rem;
+                    }
+        
+                    .home-img img {
+                        width: 90%;
+                        max-width: 250px;
+                    }
+        
+                    .about-img img {
+                        width: 90%;
+                        max-width: 250px;
+                    }
+        
+                    .skill {
+                        width: 100%;
+                    }
+        
+                    .portfolio-container {
+                        grid-template-columns: 1fr;
+                    }
+        
+                    .footer {
+                        flex-direction: column-reverse;
+                        gap: 1.5rem;
+                        text-align: center;
+                    }
+        
+                    .footer p {
+                        margin-top: 1rem;
+                    }
+        
+                    .contact {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
+                }
 
-
-}
-@media (max-width: 480px) {
-            html{
-                font-size: 50%;
-            }
-            .home-img img{
-                width: 80vw;
-                border-radius: 10% 40%;
-            }
-            .about-img img{
-                width: 80vw;
-              
-            }
-            .skill {
-                width: calc( 40.33% - 1rem);
-            }
-            .portfolio-container{
-        grid-template-columns: repeat(1,1fr)
-        
-        }
-        .footer{
-            flex-direction: column-reverse;
-        }
-        .footer p{
-            text-align: center;
-            margin-top: 10%;
-        }
-        .contact{
-            display: flex;
-            flex-direction: column;
-        }
-       
-        }
+                                /* ===== STRONG ALTERNATE COLOR (LIGHT MODE) ===== */
+                
+                                .light-mode section:nth-of-type(even) {
+                                    background: #cecdc9;
+                                    /* soft yellow */
+                                }
+                
+                                .light-mode section:nth-of-type(odd) {
+                                    background: #ffffff;
+                                }
+                
+                                /* ===== DARK MODE (unchanged but clean) ===== */
+                                section:nth-of-type(odd) {
+                                    background: var(--bg-color);
+                                }
+                
+                                section:nth-of-type(even) {
+                                    background: var(--second-bg-color);
+                                }
+                
+                                /* ===== SMOOTH TRANSITION ===== */
+                                section {
+                                    transition: background 0.5s ease;
+                                }
+                                /* ===== FOOTER THEME SUPPORT ===== */            
+                                /* Light mode */
+                                .light-mode .footer {
+                                background: #cecdc9;
+                                /* same as even section */
+                                color: #000;}
