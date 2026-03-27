@@ -8,6 +8,8 @@
     <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" />
   </a>
 </p>
+
+
 ---
 
 👩‍💻 About Me
@@ -55,21 +57,13 @@ JavaScript – Interactivity
 
 📂 Project Structure
 
+
 PORTFOLIO-Vaishnavi/
-│── index.html
-│── style.css
-│── script.js
-│── assets/
-│── images/
-
-
----
-
-📸 Project Preview
-
-<p align="center">
-  <img src="https://via.placeholder.com/800x400?text=Portfolio+Preview" alt="portfolio preview"/>
-</p>(Tip: Replace this with your real screenshot for better impact)
+├── index.html        # Main HTML file
+├── style.css         # Styling file
+├── script.js         # JavaScript functionality
+├── assets/           # Icons, fonts, and other assets
+└── images/           # Project images and screenshots
 
 
 ---
@@ -91,7 +85,9 @@ Learned GitHub Pages deployment
 📬 Contact Me
 
 📧 Email: shindevai2004@gmail.com
+
 💼 LinkedIn: https://www.linkedin.com/in/vaishnavishinde004
+
 🐙 GitHub: https://github.com/CTT-Vaishnavi
 
 
